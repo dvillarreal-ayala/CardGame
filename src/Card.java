@@ -36,4 +36,7 @@ public class Card
     public String getSuit() {
         return suit;
     }
+    public String toString() {
+        return getRank() + " of " + getSuit();
+    }
 }
