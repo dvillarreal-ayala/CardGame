@@ -21,7 +21,7 @@ public class Deck
                 cardsLeft++;
             }
         }
-        dealer = cardsLeft;
+        dealer = cardsLeft - 1;
     }
 
     public boolean isEmpty()
@@ -43,6 +43,19 @@ public class Deck
         {
             return null;
         }
-        return cards.get(17);
+        return cards.get(dealer--);
+    }
+
+    public void shuffle()
+    {
+        dealer = cardsLeft - 1;
+        //banana fr fr
+        for(int i = cardsLeft - 1; i > 0; i--)
+        {
+            int rnum = (int) (Math.random() * i);
+//            Card temp = cards.remove(i);
+            cards.add(rnum + 1, cards.remove(i));
+            cards.add(i, cards.remove(rnum));
+        }
     }
 }
