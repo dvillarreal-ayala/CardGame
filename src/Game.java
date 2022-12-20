@@ -12,9 +12,7 @@ public class Game
             System.out.println(decks.deal());
         }
 //        System.out.println(decks.deal());
-//        System.out.println("talk to myself just to hear what a real one thinks");
         decks.shuffle();
-        System.out.println("talk to myself just to hear what a real one thinks");
         for(int i = 0; i < 52; i++)
         {
             System.out.println(decks.deal());
